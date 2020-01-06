@@ -7,3 +7,5 @@
 ### Express Framework
 * one of the node.js framework
 * fast, unopinionated, minimalist
+* npm install express --save
+* package.json
