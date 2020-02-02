@@ -1,6 +1,6 @@
 ### API (Application Programming Interface)
 * is an interface for programmers for code or computers to talk to one another.
-* [IFTTT.com] is a way to connect API
+* [IFTTT.com](http://ifttt.com) is a way to connect API
 * web : usually through HTTP Requests 
 
 #### Data Formats
