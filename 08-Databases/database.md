@@ -34,3 +34,7 @@ _dogs is a collection's name._
 ``` db.dogs.remove ``` -- delete
 
 
+#### Mongoose
+
+* is a tool for interact with MongoDB (like JQuery make DOM easier), Mongoose make easier and clear
+
