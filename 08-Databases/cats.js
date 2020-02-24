@@ -11,18 +11,42 @@ var catSchema = new mongoose.Schema({
 
 var Cat = mongoose.model("Cat", catSchema);
 
-var carrie = new Cat({
-	name: "carrie",
-	age: 6,
-	temperament: "cute"
-});
+// var carrie = new Cat({
+// 	name: "amy",
+// 	age: 3,
+// 	temperament: "slience"
+// });
 
-carrie.save(function(err, cat){
+// carrie.save(function(err, cat){
+// 	if(err){
+// 		console.log("something went wrong");
+// 	} else {
+// 		console.log("we just save a cat to the DB")
+// 		console.log(cat);
+// 	}
+// });
+
+Cat.create({
+	name: "Bubble Dragon",
+	age: 12,
+	temperament:"gentle"
+}, function(err, cat){
 	if(err){
-		console.log("something went wrong");
+		console.log(err);
 	} else {
-		console.log("we just save a cat to the DB")
 		console.log(cat);
 	}
 });
+
 // retrieve all cats from the DB and console.log each one
+
+Cat.find({}, function(err, cats){
+	if(err){
+		console.log("oops! error");
+		console.log(err);
+	} else {
+		console.log("All the cats are...")
+		console.log(cats);
+	}
+})
+
