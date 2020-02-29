@@ -1,0 +1,18 @@
+### RESTful Routing
+
+#### REST - REpresentational State Tranfer
+* a mapping between HTTP routes and CRUD
+
+* web services - a common platform that allows multiple applications built on various programming languages to have ability to communicate with each other, ** RESTful web services is one of the web services ** .
+
+* is an architecture to create RESTful services
+
+| Name    | Routes         | HTTP Verb | Comments                                         |
+|---------|----------------|-----------|--------------------------------------------------|
+| Index   | /dogs          | GET       | View all dogs                                    |
+| New     | /dogs/new      | GET       | a form to create the new dog                     |
+| Create  | /dogs          | POST      | add a new dog, then redirect somewhere           |
+| Show    | /dogs/:id      | GET       | Show details about one specific dog              |
+| Edit    | /dogs/:id/edit | GET       | Show edit form for one exist dog                 |
+| Update  | /dogs/:id      | PUT       | update a particular dog, then redirect somewhere |
+| Destroy | /dogs/:id      | DELETE    | delete a particular dog, then redirect somewhere |
