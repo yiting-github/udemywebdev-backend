@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost/cat_app", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/cat_app", { useNewUrlParser: true });
 
 // adding a new cat to the database
 var catSchema = new mongoose.Schema({
