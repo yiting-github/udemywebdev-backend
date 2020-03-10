@@ -7,5 +7,9 @@ i.icon {
 }
 
 h2 {
-	padding-top:3.0em;
+	padding-top: 3.0em;
+}
+
+#delete {
+	display: inline;
 }
