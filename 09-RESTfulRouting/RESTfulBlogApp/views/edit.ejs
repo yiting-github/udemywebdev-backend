@@ -12,8 +12,8 @@
 		</div>
 		<div class="field">
 			<label>Content</label>
-			<textarea name="blog[body]"><%= blog.body %></textarea>
+			<textarea required name="blog[body]"><%= blog.body %></textarea>
 		</div>
-		<input class="ui small positive green button" type="submit">
+		<button class="ui small positive green button"><i class="save outline icon"></i>Save</button>
 </div>
 <%- include ("partials/footer")%>
