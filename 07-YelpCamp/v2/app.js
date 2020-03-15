@@ -1,21 +1,13 @@
 var express = require("express"),
 	app = express(),
 	bodyParser = require("body-parser"),
-	mongoose = require("mongoose");
+	mongoose = require("mongoose"),
+	Campground = require("./models/campground");
 
 mongoose.set('useUnifiedTopology', true);
 mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser: true });
 
-//Schema Setup
-var campgroundSchema = new mongoose.Schema({
-	name: String,
-	image: String,
-	description: String
-});
 
-// compile to model
-
-var Campground = mongoose.model("Campground", campgroundSchema)
 
 // Campground.create(
 // 	{ name: "Joshua tree",
@@ -65,7 +57,7 @@ app.post("/campgrounds", function(req, res){
 	// Create a new campground and save to DB
 	Campground.create(newCampground, function(err, newlyCreated){
 		if(err){
-			console.log(err);
+			res.render("new");
 		} else {
 			// redirect back to campgrounds page
 			res.redirect("/campgrounds");
