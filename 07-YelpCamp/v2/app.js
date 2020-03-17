@@ -1,13 +1,21 @@
 var express = require("express"),
 	app = express(),
 	bodyParser = require("body-parser"),
-	mongoose = require("mongoose"),
-	Campground = require("./models/campground");
+	mongoose = require("mongoose");
 
 mongoose.set('useUnifiedTopology', true);
 mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser: true });
 
+//Schema Setup
+var campgroundSchema = new mongoose.Schema({
+	name: String,
+	image: String,
+	description: String
+});
 
+// compile to model
+
+var Campground = mongoose.model("Campground", campgroundSchema)
 
 // Campground.create(
 // 	{ name: "Joshua tree",
