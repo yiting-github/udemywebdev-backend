@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var Campground = require("./models/campground");
-
+var Comment = require("./models/comment");
 var data = [
 	{
         name: "Cloud's Rest", 
@@ -55,11 +55,8 @@ function seedDB(){
 					}
 				});
 			});
-		}
+		});
 	});
-	
-	
-	// add a few comments 
 };
 
 module.exports = seedDB; //export seedDB function

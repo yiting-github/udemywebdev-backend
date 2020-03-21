@@ -4,7 +4,12 @@ var campgroundSchema = new mongoose.Schema({
 	name: String,
 	image: String,
 	description: String,
-	comments: String
+	comments: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "Comment" // name of model
+		}
+	]
 });
 
 // compile to model
