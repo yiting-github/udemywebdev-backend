@@ -1,10 +1,10 @@
-## Show Page
+## Show Page (v2)
 * Review the RESTful routes we've seen so far
 * Add description to our campground model
 * Show db.collection.drop() -> delete all things in DB
 * Add a show route/template
 
-## Refactor Mongoose Code
+## Refactor Mongoose Code (v3)
 * Create a models directory
 * Use module.exports
 * Require everything correctly!
@@ -13,15 +13,15 @@
 * Add a seed.js file
 * Run the seeds file every time the server starts
 
-## Add the Comment model
+## Add the Comment model (v4)
 * Make our errors go away!
 	* new file: models/comment.js
 	* Embedding ID:add comments to campgroundSchema
 * Display comments on camground show page
 
-## Comment New/Create
+## Comment New/Create 
 * Discuss nested routes
-* Add the comment new and create routes
+* Add the comment new form and create routes
 
 ## Routes
 | Name   | Routes                        | HTTP Verb | Comments                                                             |
