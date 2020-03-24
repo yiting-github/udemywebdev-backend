@@ -23,6 +23,10 @@
 * Discuss nested routes
 * Add the comment new form and create routes
 
+## Style Show Page (v5)
+* Add sidebar to show page
+* Display comments nicely
+
 ## Routes
 | Name   | Routes                        | HTTP Verb | Comments                                                             |
 |--------|-------------------------------|-----------|----------------------------------------------------------------------|
