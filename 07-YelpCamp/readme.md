@@ -25,7 +25,7 @@
 
 ## Style Show Page (v5)
 * Add sidebar to show page
-* Display comments nicely
+* Display comments nicely - public folder
 
 ## Routes
 | Name   | Routes                        | HTTP Verb | Comments                                                             |
