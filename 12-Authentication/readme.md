@@ -1,4 +1,4 @@
-# Authentication
+A# Authentication
 
 ## Intro to Auth
 
@@ -33,3 +33,35 @@ log out
 * Install nedded packages
 * Add root route and template 
 * Add secret route and template
+
+## Auth Code Along Part 2 
+* Create User model
+* Configure passport
+ * Add passportLocalMongoose package
+	```UserSchema.plugin(passportLocalMongoose);```
+ * Basic passport set up
+ 	app.js
+	```
+	app.use(passport.initialize());
+	app.use(passport.session());
+	```
+	* Passport Encode and Decode
+	
+	```
+	passport.serializeUser(User.serializeUser());
+	passport.dserializeUser(User.deserializeUser());
+	```
+ * express-sessions set up app.js
+ 
+	```
+	app.use(require("express-session")({
+		secret: "Sodagreen's new song - Tomorrow will be fine!",
+		resave: false,
+		saveUninitialized: false
+}));
+	```
+	** new session does a few things, generate a unique session id, store id in a session cookie and saveUninitialized is true will be stored in the session store **
+	
+	** saveUninitialized:false means the request of session object haven't been modified, the session object is empty and will be not stored in session store.  **
+	
+	** resave: it tell the session stores that a particular session is still active.May have to be enabled for seesion stores that don't support the touch command. **
