@@ -58,10 +58,28 @@ log out
 		secret: "Sodagreen's new song - Tomorrow will be fine!",
 		resave: false,
 		saveUninitialized: false
-}));
-	```
+}));```
 	** new session does a few things, generate a unique session id, store id in a session cookie and saveUninitialized is true will be stored in the session store **
 	
 	** saveUninitialized:false means the request of session object haven't been modified, the session object is empty and will be not stored in session store.  **
 	
 	** resave: it tell the session stores that a particular session is still active.May have to be enabled for seesion stores that don't support the touch command. **
+
+## Auth Code Along Part 3
+* Add Register Routes
+	```
+	app.post("/register", function(req,res){
+	User.register(new User({username: req.body.username}), req.body.password, function(err, user){
+		if(err){
+			console.log(err);
+			return res.render("register");
+		} 
+		passport.authenticate("local")(req, res, function(){
+			res.redirect("/secret");
+		});
+	});
+});```
+	** register create username but don't create password at the time, the second argument is password. **
+	
+	** passport authenticate("local"), local can be twitter or facebook or google many auth ways, authenticate also would encrypt(serializeUser) the password to hash then store in database.**
+* Add Register Form
