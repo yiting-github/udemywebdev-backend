@@ -58,7 +58,8 @@ log out
 		secret: "Sodagreen's new song - Tomorrow will be fine!",
 		resave: false,
 		saveUninitialized: false
-}));```
+}));
+```
 	** new session does a few things, generate a unique session id, store id in a session cookie and saveUninitialized is true will be stored in the session store **
 	
 	** saveUninitialized:false means the request of session object haven't been modified, the session object is empty and will be not stored in session store.  **
@@ -78,8 +79,28 @@ log out
 			res.redirect("/secret");
 		});
 	});
-});```
+});
+```
 	** register create username but don't create password at the time, the second argument is password. **
 	
 	** passport authenticate("local"), local can be twitter or facebook or google many auth ways, authenticate also would encrypt(serializeUser) the password to hash then store in database.**
 * Add Register Form
+
+## Auth Code Along Part 4
+* Add Login routes
+	* GET AND POST 
+		* use middleware on login logic
+```
+app.post("/login",passport.authenticate("local", {
+	successRedirect: "/secret",
+	failureRedirect: "/login"
+}) ,function(req,res){
+});
+```
+		* add new LocalStrategy
+		```
+		passport.use(new LocalStrategy(User.authenticate()));
+		```
+		** User.authenticate() is coming from passportLocalMongoose we don't need write authenticate method **
+
+* Add Login form
