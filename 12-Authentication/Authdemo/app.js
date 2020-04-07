@@ -33,7 +33,7 @@ app.get("/", function(req, res){
 	res.render("home");
 })
 
-app.get("/secret", function(req, res){
+app.get("/secret",isLoggedIn, function(req, res){
 	res.render("secret");	
 });
 
@@ -65,12 +65,25 @@ app.get("/login", function(req,res){
 
 // login logic
 // middleware runs between the begin and the end final callback
-app.post("/login",passport.authenticate("local", {
+app.post("/login", passport.authenticate("local", {
 	successRedirect: "/secret",
 	failureRedirect: "/login"
 }) ,function(req,res){
 });
 
+// logout routes
+app.get("/logout", function(req, res){
+	req.logout();
+	res.redirect("/");
+})
+
+//middleware isLoggedIn
+function isLoggedIn(req, res, next){
+	if(req.isAuthenticated()){
+		return next();
+	}
+	res.redirect("/login");
+}
 
 app.listen("3000",function(){
 	console.log("server start!")

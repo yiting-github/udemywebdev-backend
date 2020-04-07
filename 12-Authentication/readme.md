@@ -58,8 +58,8 @@ log out
 		secret: "Sodagreen's new song - Tomorrow will be fine!",
 		resave: false,
 		saveUninitialized: false
-}));
-```
+	}));
+	```
 	** new session does a few things, generate a unique session id, store id in a session cookie and saveUninitialized is true will be stored in the session store **
 	
 	** saveUninitialized:false means the request of session object haven't been modified, the session object is empty and will be not stored in session store.  **
@@ -90,13 +90,13 @@ log out
 * Add Login routes
 	* GET AND POST 
 		* use middleware on login logic
-```
-app.post("/login",passport.authenticate("local", {
-	successRedirect: "/secret",
-	failureRedirect: "/login"
-}) ,function(req,res){
-});
-```
+		```
+		app.post("/login",passport.authenticate("local", {
+			successRedirect: "/secret",
+			failureRedirect: "/login"
+		}) ,function(req,res){
+		});
+		```
 		* add new LocalStrategy
 		```
 		passport.use(new LocalStrategy(User.authenticate()));
@@ -104,3 +104,21 @@ app.post("/login",passport.authenticate("local", {
 		** User.authenticate() is coming from passportLocalMongoose we don't need write authenticate method **
 
 * Add Login form
+
+## Auth Code Along Part 5
+* Add Log out Route
+	* check user is login or not
+	```
+	req.logout();
+	``` 
+* Add isLoggin middleware 
+	```
+	function isLoggedIn(req, res, next){
+	if(req.isAuthenticated()){
+		return next();
+	}
+	res.redirect("/login");
+	}
+	```
+	** next is the next thing that need to called and 
+	express will know the next function. **
