@@ -27,6 +27,22 @@
 * Add sidebar to show page
 * Display comments nicely - public folder
 
+## Auth Pt.1 - Add User Model (v6)
+* Install all packages needed for auth
+* Define User model
+
+## Auth Pt.2 - User Register
+* Add Register routes
+* Add Register form
+
+## Auth Pt.3 - Login
+* Add login routes
+* Add login form
+
+## Auth Pt.4 - Logout/Navbar
+* Add logout route
+* Prevent user from adding a comment if not signed in
+* Show/hide auth links correctly
 ## Routes
 | Name   | Routes                        | HTTP Verb | Comments                                                             |
 |--------|-------------------------------|-----------|----------------------------------------------------------------------|
