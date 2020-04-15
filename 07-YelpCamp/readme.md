@@ -47,6 +47,9 @@
 ## Auth Pt.5 - Show/Hide links
 * Show/hide auth links correctly
 
+## Refator the routes (v7)
+* make app.js clean and use Express Router
+* 
 ## Routes
 | Name   | Routes                        | HTTP Verb | Comments                                                             |
 |--------|-------------------------------|-----------|----------------------------------------------------------------------|
