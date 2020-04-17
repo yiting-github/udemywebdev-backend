@@ -49,7 +49,11 @@
 
 ## Refator the routes (v7)
 * make app.js clean and use Express Router
-* 
+
+## Users + Comments (v8)
+* Associate users and comments
+* Save author's name to a comment automatically
+
 ## Routes
 | Name   | Routes                        | HTTP Verb | Comments                                                             |
 |--------|-------------------------------|-----------|----------------------------------------------------------------------|
