@@ -54,6 +54,11 @@
 * Associate users and comments
 * Save author's name to a comment automatically
 
+## Users + Campgrounds (v9)
+* Prevent an unauthenticated user from create a campground
+* Save username+id to newly create campground
+* use connect-flash to show error message when user login is failure.
+
 ## Routes
 | Name   | Routes                        | HTTP Verb | Comments                                                             |
 |--------|-------------------------------|-----------|----------------------------------------------------------------------|
