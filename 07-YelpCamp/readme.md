@@ -59,12 +59,16 @@
 * Save username+id to newly create campground
 * use connect-flash to show error message when user login is failure.
 
-## Edit and Delete (v10)
+## Editing Campgrounds (v10)
 * Add Method-Override
 * Add Edit route from campgrounds
 * Add link to edit page
 * Add Update Route
 * Fix $set problem
+
+## Delete Campgrounds
+* Add Destroy Route
+* Add Delete button
 
 
 ## Routes
@@ -76,5 +80,6 @@
 | Show   | /campgrounds/:id              | GET       | Show details about one specific campground                           |
 | Edit   | /campgrounds/:id/edit         | GET       | a form to edit specific campground                                   |
 | Update | /campgrounds/:id              | PUT       | Updating campground, then redirect somewhere                         |
+| Delete | /campgrounds/:id              | DELETE    | delete specific campground                                           |
 | New    | /campgrounds/:id/comments/new | GET       | a form to create the new command about specific campground           |
 | Create | /campgrounds/:id/comments     | POST      | add a new comment about specific campground, then redirect somewhere |
