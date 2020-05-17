@@ -80,7 +80,9 @@
 * Add Edit Button
 * Add Update route
 
-
+## Deleting Comments
+* Add Destroy route
+* Add Delete Button
 
 ## Routes
 | Name   | Routes                        | HTTP Verb | Comments                                                             |
