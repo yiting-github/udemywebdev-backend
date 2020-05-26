@@ -90,6 +90,9 @@
 * Hide/Show edit and delete buttons
 * Refactor Middleware
 
+## Adding in flash!
+* Install and configue connect-flash
+* Add bootstrap alerts to header
 ## Routes
 | Name   | Routes                        | HTTP Verb | Comments                                                             |
 |--------|-------------------------------|-----------|----------------------------------------------------------------------|
