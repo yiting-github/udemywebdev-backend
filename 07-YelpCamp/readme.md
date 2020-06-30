@@ -93,6 +93,16 @@
 ## Adding in flash!
 * Install and configue connect-flash
 * Add bootstrap alerts to header
+
+## Adding Dynamic Price (v12)
+* User can only add his/her campground price
+* User can only edit his/her campground price
+* Add ImagesAnimation to Landing Page 
+* Add bootstrap to Login / Register Page 
+* Navbar Improvement
+* Fix Flash Message on register page
+* Add MomentJS to Campgrounds and Comments
+
 ## Routes
 | Name   | Routes                        | HTTP Verb | Comments                                                             |
 |--------|-------------------------------|-----------|----------------------------------------------------------------------|
